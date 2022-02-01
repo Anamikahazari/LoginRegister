@@ -1,0 +1,9 @@
+.colorWhite{
+    /* color:white; */
+    color:gray;
+}
+.belowBorderLine{
+    border:none;
+    border-style:none;
+    border-bottom: 1px solid gray;
+}
