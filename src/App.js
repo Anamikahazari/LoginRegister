@@ -3,6 +3,8 @@ import './App.css';
 import Loginregister from './component/loginRegister/Loginregister';
 import Loginpage from './component/loginpage/Loginpage';
 import Registerpage from './component/registerinpage/Registerpage';
+import { Provider } from 'react-redux';
+import store from  './redux/store';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,6 +12,7 @@ import {
 } from "react-router-dom";
 function App() {
   return (
+    <Provider store={store}>
     <div className="App absolute inset-0 flex flex-col justify-center items-center">
        <Router>
         <Routes>
@@ -20,6 +23,7 @@ function App() {
     </Router>
 
     </div>
+    </Provider>
   );
 }
 

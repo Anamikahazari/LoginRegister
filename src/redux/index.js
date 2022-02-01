@@ -1,0 +1,1 @@
+import {updateUser} from './registerpage/registerAction'
