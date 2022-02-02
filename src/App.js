@@ -1,4 +1,4 @@
-
+import react, {useState} from 'react';
 import './App.css';
 import Loginregister from './component/loginRegister/Loginregister';
 import Loginpage from './component/loginpage/Loginpage';
@@ -9,12 +9,14 @@ import {
   Route,
 } from "react-router-dom";
 function App() {
+  const [AddList,setList] = useState([]);
+
   return (
     <div className="App absolute inset-0 flex flex-col justify-center items-center">
        <Router>
         <Routes>
-              <Route exact path="/" element={<Loginpage/>}/>
-              <Route path="/register" element={<Registerpage/>}/>
+              <Route exact path="/" element={<Loginpage AddList ={AddList}/>}/>
+              <Route path="/register" element={<Registerpage setList={setList} AddList ={AddList} />}/>
         </Routes>
         <Loginregister/>
     </Router>
